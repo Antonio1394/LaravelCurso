@@ -10,6 +10,9 @@
 | and give it the controller to call when that URI is requested.
 |
 */
+Route::get('prueba',function(){
+	return 'Hola desde routes.php';
+});
 
 Route::get('/', function () {
     return view('welcome');
