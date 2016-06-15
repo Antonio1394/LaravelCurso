@@ -10,6 +10,8 @@
 | and give it the controller to call when that URI is requested.
 |
 */
+
+Route::get('controlador','PruebaController@index');
 Route::get('prueba',function(){
 	return 'Hola desde routes.php';
 });
@@ -19,6 +21,10 @@ route::get('nombre/{nombre}',function($nombre){
 });
 
 route::get('edad/{edad}',function($edad){
+	return 'mi edad es: '.$edad;
+});
+
+route::get('edad2/{edad?}',function($edad=20){
 	return 'mi edad es: '.$edad;
 });
 
