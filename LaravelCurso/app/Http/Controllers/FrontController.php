@@ -16,7 +16,7 @@ class FrontController extends Controller
      */
     public function index()
     {
-        
+        return view('index');
     }
 
     /**
@@ -26,7 +26,7 @@ class FrontController extends Controller
      */
     public function contacto()
     {
-        //
+        return view('contacto');
     }
 
     /**
@@ -37,7 +37,7 @@ class FrontController extends Controller
      */
     public function reviews()
     {
-        //
+        return view('reviews');
     }
 
     
