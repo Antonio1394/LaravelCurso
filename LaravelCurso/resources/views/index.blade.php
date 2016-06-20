@@ -8,8 +8,6 @@
 
 @section('content')
 
-	@include('alerts.errors')
-	@include('alerts.request')
 
 	<div class="header">
 		<div class="top-header">
