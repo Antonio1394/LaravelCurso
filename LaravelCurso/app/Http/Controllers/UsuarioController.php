@@ -37,7 +37,13 @@ class UsuarioController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        \Cinema\User::create([
+                'name'=>$request['name'],
+                'email'=>$request['email'],
+                'password'=>bcrypt($request['password']),
+            ]);
+
+        return "Usuario Registrado";
     }
 
     /**
