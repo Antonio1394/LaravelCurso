@@ -7,10 +7,12 @@
 			<th>Email</th>
 			<th>Operaciones</th>
 		</thead>
+		@foreach($users as $user)
 		<tbody>
-			<td></td>
-			<td></td>
+			<td>{{$user->name}}</td>
+			<td>{{$user->email}}</td>
 			<td></td>
 		</tbody>
+		@endforeach
 	</table>
 @stop

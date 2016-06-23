@@ -16,7 +16,8 @@ class UsuarioController extends Controller
      */
     public function index()
     {
-        return view('usuario.index');
+        $users=\Cinema\User::All();
+        return view('usuario.index',compact('users'));
     }
 
     /**
@@ -43,7 +44,7 @@ class UsuarioController extends Controller
                 'password'=>bcrypt($request['password']),
             ]);
 
-        return "Usuario Registrado";
+        return redirect('/usuario')->with('message','store');
     }
 
     /**
