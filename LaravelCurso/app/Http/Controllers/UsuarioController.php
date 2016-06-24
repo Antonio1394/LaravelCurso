@@ -42,7 +42,7 @@ class UsuarioController extends Controller
         \Cinema\User::create([
                 'name'=>$request['name'],
                 'email'=>$request['email'],
-                'password'=>bcrypt($request['password']),
+                'password'=>$request['password'],
             ]);
 
         return redirect('/usuario')->with('message','store');
@@ -80,7 +80,8 @@ class UsuarioController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $user=User::find($id);
+        $user->fill($request->all());
     }
 
     /**
