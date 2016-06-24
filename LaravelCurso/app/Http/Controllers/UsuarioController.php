@@ -3,7 +3,7 @@
 namespace Cinema\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use Cinema\User;
 use Cinema\Http\Requests;
 use Cinema\Http\Controllers\Controller;
 
@@ -16,7 +16,8 @@ class UsuarioController extends Controller
      */
     public function index()
     {
-        $users=\Cinema\User::All();
+        $usuario=new User;
+        $users=$usuario::All();
         return view('usuario.index',compact('users'));
     }
 
