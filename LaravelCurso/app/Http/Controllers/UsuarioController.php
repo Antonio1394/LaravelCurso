@@ -4,6 +4,9 @@ namespace Cinema\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Cinema\User;
+use Session;
+use Redirect;
+
 use Cinema\Http\Requests;
 use Cinema\Http\Controllers\Controller;
 
@@ -82,6 +85,9 @@ class UsuarioController extends Controller
     {
         $user=User::find($id);
         $user->fill($request->all());
+        $user->save();
+        Session::flash('message','Usuario Editado Exitosamente');
+        return Redirect::to('/usuario');
     }
 
     /**
