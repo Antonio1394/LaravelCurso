@@ -9,6 +9,8 @@ use Redirect;
 
 use Cinema\Http\Requests;
 use Cinema\Http\Requests\UserCreateRequest;
+use Cinema\Http\Requests\UserUpdateRequest;
+
 
 use Cinema\Http\Controllers\Controller;
 
@@ -83,7 +85,7 @@ class UsuarioController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(UserUpdateRequest $request, $id)
     {
         $user=User::find($id);
         $user->fill($request->all());
