@@ -24,7 +24,7 @@ class UsuarioController extends Controller
     public function index()
     {
         $usuario=new User;
-        $users=$usuario::All();
+        $users=$usuario::paginate(2);
         return view('usuario.index',compact('users'));
     }
 
