@@ -102,7 +102,7 @@ class UsuarioController extends Controller
      */
     public function destroy($id)
     {
-        $usuario=User::find($id)
+        $usuario=User::find($id);
         $usuario->delete();
         Session::flash('message','Usuario Eliminado Exitosamente');
         return Redirect::to('/usuario');
