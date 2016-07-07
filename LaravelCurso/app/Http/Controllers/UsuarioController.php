@@ -46,11 +46,7 @@ class UsuarioController extends Controller
      */
     public function store(UserCreateRequest $request)
     {
-        \Cinema\User::create([
-                'name'=>$request['name'],
-                'email'=>$request['email'],
-                'password'=>$request['password'],
-            ]);
+        User::create($request->all());
 
         return redirect('/usuario')->with('message','store');
     }
