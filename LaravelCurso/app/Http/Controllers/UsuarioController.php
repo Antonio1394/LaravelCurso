@@ -13,9 +13,19 @@ use Cinema\Http\Requests\UserUpdateRequest;
 
 
 use Cinema\Http\Controllers\Controller;
+use Illuminate\Routing\Route;
 
 class UsuarioController extends Controller
 {
+    public function __construct(){
+        $this->beforeFilter('@find',['only'=>['edit','update','destroy']]);
+    }
+
+    public function find(Route $route){
+        $this->user=User::find($route->getParameter('usuario'));
+        return $this->user;
+    }
+
     /**
      * Display a listing of the resource.
      *
