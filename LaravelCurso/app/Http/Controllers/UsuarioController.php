@@ -58,7 +58,7 @@ class UsuarioController extends Controller
     {
         User::create($request->all());
 
-        return redirect('/usuario')->with('message','store');
+        return redirect('/usuario')->with('message','Usuario Registrado Exitosamente');
     }
 
     /**
