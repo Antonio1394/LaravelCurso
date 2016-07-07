@@ -23,7 +23,7 @@ class UsuarioController extends Controller
 
     public function find(Route $route){
         $this->user=User::find($route->getParameter('usuario'));
-        return $this->user;
+    
     }
 
     /**
@@ -80,8 +80,8 @@ class UsuarioController extends Controller
      */
     public function edit($id)
     {
-        $user=User::find($id);
-        return view ('usuario.edit',['user'=>$user]);
+        
+        return view ('usuario.edit',['user'=>$this->user]);
     }
 
     /**
@@ -93,9 +93,9 @@ class UsuarioController extends Controller
      */
     public function update(UserUpdateRequest $request, $id)
     {
-        $user=User::find($id);
-        $user->fill($request->all());
-        $user->save();
+        
+        $this->user->fill($request->all());
+        $this->user->save();
         Session::flash('message','Usuario Editado Exitosamente');
         return Redirect::to('/usuario');
     }
@@ -108,8 +108,7 @@ class UsuarioController extends Controller
      */
     public function destroy($id)
     {
-        $usuario=User::find($id);
-        $usuario->delete();
+        $this->user->delete();
         Session::flash('message','Usuario Eliminado Exitosamente');
         return Redirect::to('/usuario');
 
