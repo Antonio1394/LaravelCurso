@@ -7,7 +7,7 @@
 @endsection
 
 @section('content')
-
+	@include('alerts.errors')
 
 	<div class="header">
 		<div class="top-header">

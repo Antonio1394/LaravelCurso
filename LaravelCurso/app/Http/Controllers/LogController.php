@@ -40,7 +40,11 @@ class LogController extends Controller
      */
     public function store(LoginRequest $request)
     {
-        return $request->email;
+        if(Auth::attempt(['email'=>$request['email'],'password'=>$request['password']])){
+            return Redirect::to('admin');
+        }
+        Session::flash('message-error','Datos Incorrectos');
+        return Redirect::to('/');
     }
 
     /**
