@@ -3,7 +3,10 @@
 namespace Cinema\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use Auth;
+use Session;
+use Redirect;
+use Cinema\Http\Requests\LoginRequest;
 use Cinema\Http\Requests;
 use Cinema\Http\Controllers\Controller;
 
@@ -35,9 +38,9 @@ class LogController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(LoginRequest $request)
     {
-        //
+        return $request->email;
     }
 
     /**
