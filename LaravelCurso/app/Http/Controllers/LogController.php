@@ -47,6 +47,11 @@ class LogController extends Controller
         return Redirect::to('/');
     }
 
+    public function logout(){
+        Auth::logout();
+        return Redirect::to('/');
+    }
+
     /**
      * Display the specified resource.
      *
