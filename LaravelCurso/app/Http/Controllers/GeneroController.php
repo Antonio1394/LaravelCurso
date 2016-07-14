@@ -37,7 +37,11 @@ class GeneroController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        if($request->ajax()){
+            return response()->json([
+                "mensaje"=>$request->all()
+            ]);
+        }
     }
 
     /**
