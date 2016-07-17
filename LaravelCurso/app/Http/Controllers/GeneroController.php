@@ -3,7 +3,7 @@
 namespace Cinema\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use Cinema\Genre;
 use Cinema\Http\Requests;
 use Cinema\Http\Controllers\Controller;
 
@@ -38,8 +38,9 @@ class GeneroController extends Controller
     public function store(Request $request)
     {
         if($request->ajax()){
+            Genre::create($request->all());
             return response()->json([
-                "mensaje"=>$request->all()
+                "mensaje"=>"creado"
             ]);
         }
     }
