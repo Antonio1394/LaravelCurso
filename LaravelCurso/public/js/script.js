@@ -7,6 +7,10 @@ $('#registro').click(function(){
         headers:    {'X-CSRF-TOKEN':token},
         type:       'POST',
         dataType:   'json',
-        data:{genre:dato }
+        data:{genre:dato },
+
+        success:function(){
+            $("#msj-success").fadeIn(3000);
+        }
     }); 
 });
