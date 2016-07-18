@@ -14,6 +14,12 @@ class GeneroController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+    public function listing(){
+        $genres=Genre::all();
+        return response()->json(
+            $genres->toArray()
+        );
+    }
     public function index()
     {
         return view('genero.index');
