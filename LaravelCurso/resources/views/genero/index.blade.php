@@ -1,5 +1,6 @@
 @extends('layouts.admin')
 	@section('content')
+	@include('genero.modal')
 	<table class="table">
 		<thead>
 			<th>Nombre</th>
