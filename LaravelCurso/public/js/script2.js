@@ -14,4 +14,9 @@ $(document).ready(function(){
 function Mostrar(btn)
 {
 	console.log(btn.value);
+	var route="http://cinema.app/genero/"+btn.value+"/edit";
+	$.get(route,function(res){
+		$("#genre").val(res.genre);
+		$("#id").val(res.id);
+	});
 }
