@@ -4,7 +4,7 @@ $(document).ready(function(){
 
     $.get(route,function(res){
         $(res).each(function(key,value){
-            tablaDatos.append("<tr><td>"+value.genre+"</td><td><button value="+value.id+" OnClick='Mostrar(this)' class='btn btn-primary'>Editar</button> <button class='btn btn-danger'>Elimiar</button></td></tr>");
+            tablaDatos.append("<tr><td>"+value.genre+"</td><td><button value="+value.id+" OnClick='Mostrar(this)' class='btn btn-primary'data-toggle='modal' data-target='#myModal'>Editar</button> <button class='btn btn-danger'>Elimiar</button></td></tr>");
         });
     });
 
@@ -15,7 +15,8 @@ function Mostrar(btn)
 {
 	console.log(btn.value);
 	var route="http://cinema.app/genero/"+btn.value+"/edit";
-	$.get(route,function(res){
+	
+	$.get(route, function(res){
 		$("#genre").val(res.genre);
 		$("#id").val(res.id);
 	});
