@@ -18,7 +18,8 @@ function Mostrar(btn)
 
 	$.get(route, function(res){
 		
-			$("#genre").text(res.genre);
+			$("#genero").val(res.genre);
+			//$("#genero").val('hola');
 			$("#id").val(res.id);
 
 	});
