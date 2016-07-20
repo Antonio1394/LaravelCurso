@@ -71,9 +71,9 @@ class GeneroController extends Controller
     public function edit($id)
     {
         $genre=Genre::find($id);
-        return response()->json([
+        return response()->json(
             $genre->toArray()
-        ]);
+        );
     }
 
     /**
