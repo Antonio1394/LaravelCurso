@@ -1,5 +1,5 @@
 $('#registro').click(function(){
-    var dato= $('#genre').val();
+    var dato= $('#genero').val();
     var route="http://cinema.app/genero";
     var token= $("#token").val();
     $.ajax({
