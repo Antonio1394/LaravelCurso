@@ -10,7 +10,7 @@ $('#registro').click(function(){
         data:{genre:dato },
 
         success:function(){
-            $("#msj-success").fadeIn(3000);
+            $("#msj-success").fadeIn(3);
         }
     }); 
 });

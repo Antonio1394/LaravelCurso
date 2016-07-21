@@ -43,6 +43,7 @@ class GeneroController extends Controller
      */
     public function store(Request $request)
     {
+    
         if($request->ajax()){
             Genre::create($request->all());
             return response()->json([

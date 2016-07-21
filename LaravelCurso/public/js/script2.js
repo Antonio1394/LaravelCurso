@@ -19,7 +19,6 @@ function Mostrar(btn)
 	$.get(route, function(res){
 		
 			$("#genero").val(res.genre);
-			//$("#genero").val('hola');
 			$("#id").val(res.id);
 
 	});
