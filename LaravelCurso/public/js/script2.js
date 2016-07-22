@@ -26,14 +26,14 @@ function Mostrar(btn)
 
 $("#actualizar").click(function(){
 
-	var value =$("id").val();
-	var dato =$("#genero").val();
-	var route ="/genero/"+value+"";
-	var token= $("#token").val();
+	var value = $("#id").val();
+	var dato = $("#genero").val();
+	var route = "/genero/"+value+"";
+	var token=  $("#token").val();
 
 	$.ajax({
 		url: 	route,
-		headers: {'X-CSRF-TOKEN'},
+		headers: {'X-CSRF-TOKEN':token},
 		type: 'PUT',
 		dataType: 'json',
 		data: {genre: dato}
