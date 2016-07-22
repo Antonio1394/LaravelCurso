@@ -23,3 +23,19 @@ function Mostrar(btn)
 
 	});
 }
+
+$("#actualizar").click(function(){
+
+	var value =$("id").val();
+	var dato =$("#genero").val();
+	var route ="/genero/"+value+"";
+	var token= $("#token").val();
+
+	$.ajax({
+		url: 	route,
+		headers: {'X-CSRF-TOKEN'},
+		type: 'PUT',
+		dataType: 'json',
+		data: {genre: dato}
+	});
+});
