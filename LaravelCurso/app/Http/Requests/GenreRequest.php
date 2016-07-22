@@ -24,7 +24,7 @@ class GenreRequest extends Request
     public function rules()
     {
         return [
-            'genre'=>'required'
+            'genre'=>'required|min:3'
         ];
     }
 }

@@ -13,7 +13,8 @@ $('#registro').click(function(){
             $("#msj-success").fadeIn();
         },
         error:function(msj){
-            $("#msj-error").fadeIn();
+            $('#msj').html(msj.responseJSON.genre);  
+            $("#msj-error").fadeIn(); 
         }
     }); 
 });
