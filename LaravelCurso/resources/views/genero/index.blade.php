@@ -1,6 +1,9 @@
 @extends('layouts.admin')
 	@section('content')
 	@include('genero.modal')
+	<div id="msj-success" class="alert alert-success alert-dismissible" role="alert" style="display:none">
+  		<strong>Genero Actualizado Exitosamente</strong>
+		</div>
 	<table class="table">
 		<thead>
 			<th>Nombre</th>
