@@ -20,7 +20,7 @@
 		@endforeach
 	</table>
 	{!! $users->render() !!}
-@stop
+@endsection
 @section('scripts')
-{!!Html::script('js/script3.js')!!}
+	    {!!Html::script('js/script3.js')!!}
 @endsection
