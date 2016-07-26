@@ -21,3 +21,6 @@
 	</table>
 	{!! $users->render() !!}
 @stop
+@section('scripts')
+{!!Html::script('js/script3.js')!!}
+@endsection
