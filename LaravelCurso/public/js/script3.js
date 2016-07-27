@@ -9,7 +9,7 @@ $(document).on('click','.pagination a',function(e){
         type: 'GET',
         dataType:'json',
         success:function(data){
-            console.log(data);
+            $(".users").html(data);
         }
     });
 });
