@@ -4,6 +4,7 @@ namespace Cinema\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Cinema\Http\Requests;
+use Cinema\Genre;
 use Cinema\Http\Controllers\Controller;
 
 class MovieController extends Controller
@@ -15,7 +16,7 @@ class MovieController extends Controller
      */
     public function index()
     {
-        return "estoy en el index";
+
     }
 
     /**
@@ -25,7 +26,8 @@ class MovieController extends Controller
      */
     public function create()
     {
-        return "esto seria el formulario para crear";
+        $genres=Genre::lists('genre','id');
+        return view('pelicula.create',compact('genres'));
     }
 
     /**
