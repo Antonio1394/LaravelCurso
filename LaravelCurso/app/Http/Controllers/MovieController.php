@@ -39,9 +39,9 @@ class MovieController extends Controller
      */
     public function store(Request $request)
     {
-        dd( $request);
-        //Movie::create($request->all());
-        //return "Listo";
+        
+        Movie::create($request->all());
+        return "Listo";
     }
 
     /**
