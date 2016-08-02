@@ -26,6 +26,6 @@
 </div>
 
 <div class="form-group">
-	{!! Form::label('Poster','Poster: ')!!}
+	{!! Form::label('Poster','Genero: ')!!}
 	{!! Form::select('genre_id',$genres)!!}
 </div>
