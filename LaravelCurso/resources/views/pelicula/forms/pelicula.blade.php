@@ -27,5 +27,5 @@
 
 <div class="form-group">
 	{!! Form::label('Poster','Genero: ')!!}
-	{!! Form::select('genre_id',$genres)!!}
+	{!! Form::select('genre_id',$genres,null,['class'=>'form-control'])!!}
 </div>
