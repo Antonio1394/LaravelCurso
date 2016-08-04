@@ -22,7 +22,7 @@
 
 <div class="form-group">
 	{!! Form::label('Poster','Poster: ')!!}
-	{!! Form::file('path')!!}
+	{!! Form::file('path',['class'=>'form-control'])!!}
 </div>
 
 <div class="form-group">
