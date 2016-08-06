@@ -9,5 +9,8 @@
 				<th>Caratula</th>
 				<th>Operaciones</th>
 			</thead>
-			
+			@foreach($movies as $movie)
+				<tbody>
+					
+				</tbody>
 		</table>
