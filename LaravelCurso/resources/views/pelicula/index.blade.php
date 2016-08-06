@@ -11,6 +11,15 @@
 			</thead>
 			@foreach($movies as $movie)
 				<tbody>
-					
+					<td>{{$movie->name}}</td>
+					<td>{{$movie->genre}}</td>
+					<td>{{$movie->direction}}</td>	
+					<td>
+						<img src="movies/{{$movie->path}}" alt="">
+					</td>
+					<td>Editar</td>
 				</tbody>
+			@endforeach
 		</table>
+
+	@endsection
