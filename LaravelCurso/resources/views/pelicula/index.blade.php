@@ -15,7 +15,7 @@
 					<td>{{$movie->genre}}</td>
 					<td>{{$movie->direction}}</td>	
 					<td>
-						<img src="movies/{{$movie->path}}" alt="">
+						<img src="movies/{{$movie->path}}" alt="" style="width:100px;">
 					</td>
 					<td>Editar</td>
 				</tbody>
