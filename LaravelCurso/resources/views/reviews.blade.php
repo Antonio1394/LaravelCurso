@@ -37,7 +37,7 @@
 							<p class="info">CAST:&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{!!$movie->cast!!}</p>
 							<p class="info">DIRECTION: &nbsp;&nbsp;&nbsp;&nbsp;{!!$movie->direction!!}</p>
 							<p class="info">GENRE:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {!!$movie->genre!!}</p>
-							<p class="info">DURATION:&nbsp;&nbsp;&nbsp; &nbsp;{!!$movie->duration!!}</p>
+							<p class="info">DURATION:&nbsp;&nbsp;&nbsp;{!!$movie->duration!!}</p>
 						</div>
 
 						<div class="clearfix"></div>
