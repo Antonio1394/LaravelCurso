@@ -15,6 +15,19 @@ class MovieController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
+    public function __construct()
+    {
+        $this->middleware('auth');
+        $this->middleware('admin');
+        $this->beforeFilter('@find', ['only' => ['edit', 'update', 'destroy']]);
+    }
+    public function find(Route $route)
+    {
+        $this->movie = Movie::find($route->getParameter("pelicula"));
+        $this->notFound($this->movie);
+    }
+    
     public function index()
     {
         $movies=Movie::Movies();
@@ -64,7 +77,8 @@ class MovieController extends Controller
      */
     public function edit($id)
     {
-        //
+        $genres=Genre::lists('genre','id');
+        return view('pelicula.edit',)
     }
 
     /**
