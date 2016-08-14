@@ -27,7 +27,7 @@ class MovieController extends Controller
         $this->movie = Movie::find($route->getParameter("pelicula"));
         $this->notFound($this->movie);
     }
-    
+
     public function index()
     {
         $movies=Movie::Movies();
@@ -91,7 +91,9 @@ class MovieController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $this->movie->fill($request->all());
+        $this->movie->save();
+        return redirect('/pelicula')->with('message', 'Pelicula editada correctamente');
     }
 
     /**
