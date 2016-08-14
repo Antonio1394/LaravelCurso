@@ -77,8 +77,9 @@ class MovieController extends Controller
      */
     public function edit($id)
     {
-        $genres=Genre::lists('genre','id');
-        return view('pelicula.edit',)
+        $genres = Genre::lists('genre', 'id');
+        $movie = Movie::find($id);
+        return view('pelicula.edit', ['movie' => $movie, 'genres' => $genres]);
     }
 
     /**
