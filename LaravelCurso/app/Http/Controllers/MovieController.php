@@ -7,6 +7,8 @@ use Cinema\Http\Requests;
 use Cinema\Genre;
 use Cinema\Movie;
 use Cinema\Http\Controllers\Controller;
+use Illuminate\Routing\Route;
+
 
 class MovieController extends Controller
 {
@@ -25,7 +27,7 @@ class MovieController extends Controller
     public function find(Route $route)
     {
         $this->movie = Movie::find($route->getParameter("pelicula"));
-        $this->notFound($this->movie);
+        //$this->notFound($this->movie);
     }
 
     public function index()
