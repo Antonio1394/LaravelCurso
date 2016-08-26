@@ -106,6 +106,8 @@ class MovieController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $this->movie->delete();
+        \Storage::delete($this->movie->path);
+        return redirect('/pelicula')->with('message', 'Pelicula Eliminada correctamente');
     }
 }
