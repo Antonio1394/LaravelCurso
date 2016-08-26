@@ -57,7 +57,8 @@ class MovieController extends Controller
     {
         
         Movie::create($request->all());
-        return "Listo";
+        return redirect('/pelicula')->with('message', 'Pelicula Creada correctamente');
+
     }
 
     /**
