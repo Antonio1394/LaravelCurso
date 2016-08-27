@@ -3,7 +3,9 @@
 namespace Cinema\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use Mail;
+use Session;
+use Redirect;
 use Cinema\Http\Requests;
 use Cinema\Http\Controllers\Controller;
 
@@ -37,7 +39,14 @@ class MailController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        Mail::send('emails.contact',$request->all(),function($msj){
+            $msj->subject('Correo de contacto');
+            $msj->to('antoniorivm1394@gmail.com');
+
+        });
+
+        Session::flash('message','Mensaje enviado Correctamente');
+        return Redirect::to('/contacto');
     }
 
     /**
