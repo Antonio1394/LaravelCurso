@@ -29,14 +29,12 @@
 			<h3 class="head">CONTACT</h3>
 			<p>WE'RE ALWAYS HERE TO HELP YOU</p>
 			<div class="contact-form">
-				{!!Form::open(['route' => 'mail.store', 'method' => 'POST'])!!}
+				{!!Form::open(['url'=>'/password/email'])!!}
 					<div class="col-md-6 contact-left">
-						{!!Form::text('name', null, ['placeholder' => 'Nombre', 'required' => 'required'])!!}
-						{!!Form::text('email', null, ['placeholder' => 'Correo Electronico', 'required' => 'required'])!!}
-					</div>
-					<div class="col-md-6 contact-right">
-						{!!Form::textarea('mensaje', null, ['placeholder' => 'Mensaje'])!!}
-						{!!Form::submit('SEND')!!}
+						
+						{!!Form::text('email')!!}
+					</div>						
+						{!!Form::submit('Enviar Link')!!}
 					</div>
 					<div class="clearfix"></div>
 				{!!Form::close()!!}
