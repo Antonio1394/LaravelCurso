@@ -1,0 +1,1 @@
+Sigue el lik para resetear tu password {{url('password/reset/'.$token)}}

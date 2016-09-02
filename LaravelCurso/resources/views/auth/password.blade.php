@@ -31,7 +31,6 @@
 			<div class="contact-form">
 				{!!Form::open(['url'=>'/password/email'])!!}
 					<div class="col-md-6 contact-left">
-						
 						{!!Form::text('email')!!}
 					</div>						
 						{!!Form::submit('Enviar Link')!!}
