@@ -8,8 +8,6 @@
 	{!! Form::text('cast',null,['class'=>'form-control','placeholder'=>'Ingresa el Elenco'])!!}
 </div>
 
-
-
 <div class="form-group">
 	{!! Form::label('Direcion','Direccion: ')!!}
 	{!! Form::text('direction',null,['class'=>'form-control','placeholder'=>'Ingresa al director'])!!}
